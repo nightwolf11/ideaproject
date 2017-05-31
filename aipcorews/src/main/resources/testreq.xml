@@ -1,0 +1,11 @@
+<user:getUserRequest xmlns:user="http://www.xzq.com/userws">
+  <user:head>
+    <user:systemcode>string</user:systemcode>
+    <user:translatedt>string</user:translatedt>
+    <user:tradecode>string</user:tradecode>
+    <user:bankcode>string</user:bankcode>
+  </user:head>
+  <user:message>
+    <user:userid>string</user:userid>
+  </user:message>
+</user:getUserRequest>

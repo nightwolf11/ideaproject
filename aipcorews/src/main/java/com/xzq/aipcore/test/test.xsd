@@ -1,0 +1,73 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.xzq.com/userws"
+           targetNamespace="http://www.xzq.com/userws" elementFormDefault="qualified">
+
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="head" type="tns:requesthead"/>
+                <xs:element name="message" type="tns:requestmessage"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="head" type="tns:responsehead"/>
+                <xs:element name="message" type="tns:responsemessage"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="requesthead">
+        <xs:sequence>
+            <xs:element name="systemcode" type="xs:string"/>
+            <xs:element name="translatedt" type="xs:string"/>
+            <xs:element name="tradecode" type="xs:string"/>
+            <xs:element name="bankcode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="responsehead">
+        <xs:sequence>
+            <xs:element name="systemcode" type="xs:string"/>
+            <xs:element name="translatedt" type="xs:string"/>
+            <xs:element name="tradecode" type="xs:string"/>
+            <xs:element name="bankcode" type="xs:string"/>
+            <xs:element name="rows" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="requestmessage">
+        <xs:sequence>
+            <xs:element name="userid" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="responsemessage">
+        <xs:sequence>
+            <xs:element name="user" type="tns:user"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="userid" type="xs:string"/>
+            <xs:element name="user" type="xs:string"/>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="sex" type="xs:string"/>
+            <xs:element name="birthday" type="xs:string"/>
+            <xs:element name="makedt" type="xs:string"/>
+            <xs:element name="modifydt" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--<xs:simpleType name="currency">-->
+        <!--<xs:restriction base="xs:string">-->
+            <!--<xs:enumeration value="GBP"/>-->
+            <!--<xs:enumeration value="EUR"/>-->
+            <!--<xs:enumeration value="PLN"/>-->
+        <!--</xs:restriction>-->
+    <!--</xs:simpleType>-->
+
+</xs:schema>
