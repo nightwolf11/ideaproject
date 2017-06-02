@@ -3,6 +3,7 @@ package com.xzq.aipcore.webserivce.soap;
 
 import com.xzq.aipcore.test.*;
 import com.xzq.aipcore.service.*;
+import com.xzq.aipcore.test.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -41,7 +42,7 @@ public class UserEndpoint {
             resphead.setTradecode(request.getHead().getTradecode());
             resphead.setTranslatedt(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
             Responsemessage respmessage = new Responsemessage();
-            com.xzq.aipcore.domain.User u = userService.findById(Long.valueOf(request.getMessage().getUserid()));
+            com.xzq.aipcore.domain.primary.User u = userService.findById(Long.valueOf(request.getMessage().getUserid()));
             System.out.println(u.toString());
             User nu = new User();
 //            nu.setBirthday("2015-04-03");

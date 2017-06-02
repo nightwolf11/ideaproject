@@ -1,6 +1,6 @@
 package com.xzq.aipcore.webserivce.rest;
 
-import com.xzq.aipcore.domain.User;
+import com.xzq.aipcore.domain.primary.User;
 import com.xzq.aipcore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

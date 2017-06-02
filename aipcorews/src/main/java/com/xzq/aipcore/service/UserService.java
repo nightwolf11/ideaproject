@@ -1,6 +1,6 @@
 package com.xzq.aipcore.service;
 
-import com.xzq.aipcore.domain.User;
+import com.xzq.aipcore.domain.primary.User;
 
 
 public interface UserService {

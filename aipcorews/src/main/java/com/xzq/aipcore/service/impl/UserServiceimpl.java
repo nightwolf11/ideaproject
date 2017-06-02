@@ -1,7 +1,7 @@
 package com.xzq.aipcore.service.impl;
 
-import com.xzq.aipcore.dao.UserRepository;
-import com.xzq.aipcore.domain.User;
+import com.xzq.aipcore.dao.primary.UserRepository;
+import com.xzq.aipcore.domain.primary.User;
 import com.xzq.aipcore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
